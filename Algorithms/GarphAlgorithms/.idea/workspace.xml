@@ -4,22 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aaa46883-528d-45ad-8897-6e94bc100fc9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/BreadthFirstSearch/BreadthFirstSearch.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/BreadthFirstSearch/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/BreadthFirstSearch/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DepthFirstSearch/DepthFirstSearch.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DepthFirstSearch/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DepthFirstSearch/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DijkstraAlgorithm/DijkstraAlgorithm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DijkstraAlgorithm/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DijkstraAlgorithm/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FloydWarshallAlgorithm/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GarphAlgorithms.iml" beforeDir="false" afterPath="$PROJECT_DIR$/GraphAlgorithms.iml" afterDir="false" />
-    </list>
+    <list default="true" id="aaa46883-528d-45ad-8897-6e94bc100fc9" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

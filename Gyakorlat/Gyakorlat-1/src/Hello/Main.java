@@ -1,19 +1,25 @@
+package Hello;
+
 public class Main {
     public static void main(String[] args) {
+        System.out.println("hello");
+        System.out.println("world");
+        System.out.println("aa");
+        System.out.println("bb");
+        System.out.println();
+
+        int big = 100_000; // Az aláhúzás megengedett az Integer típusú változókban, átláthatóbb vele az egész szám értéke
+
+        long n = 2_147_483_648L;
+
+        float pi = 3.14f;
+
         boolean ok = true;
 
-        int big = 100_000;
-        long x = 1234567890;
-        float vmi = 6.70f;
-        double pi = 3.17;
-        String text = "Java 21 fulz";
-        // System.out.println("Hello World!");
-        System.out.println(big);
-        System.out.println(x);
-        System.out.println(vmi);
-        System.out.println(pi);
-        System.out.println(text);
         System.out.println(ok);
+
+        //int z;
+        // System.out.println(z);
 
         // Referencia: tulajdonképpen egy mutató!
 

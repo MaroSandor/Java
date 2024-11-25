@@ -1,0 +1,1 @@
+# Elmaradt óra a Szakmai napok miatt!

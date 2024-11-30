@@ -1,0 +1,30 @@
+Porcelán váza,Gyűjthető tárgyak,49514,58560
+Régi bakelit lemez,Lakberendezés,7831,12464
+Régi könyv,Lakberendezés,34784,47868
+Ezüst evőeszköz,Dekoráció,38979,42126
+Kézzel varrott szőnyeg,Konyhai eszközök,35067,39062
+Régi térkép,Technika,18145,25766
+Régi fényképezőgép,Művészet,13396,29865
+Antik kulcs,Konyhai eszközök,41564,50476
+Antik lámpa,Gyűjthető tárgyak,36686,55450
+Porcelán figura,Gyűjthető tárgyak,15244,26623
+Vintage fali óra,Művészet,26019,30541
+Bronz szobor,Dekoráció,41348,48461
+Porcelán figura,,33559,40882
+Vintage bőr pénztárca,Művészet,32903,46241
+Régi könyv,Dekoráció,47801,53414
+Retro televízió,,27362
+Antik üveg,Gyűjthető tárgyak,14825,30022
+Antik lámpa,Technika,36327,41352
+Antik írógép,Technika,40430,52125
+Kovácsoltvas gyertyatartó,Dekoráció,40503,53345
+Kézzel varrott szőnyeg,Lakberendezés,nincsOsszeg,53137
+Vintage fali óra,Gyűjthető tárgyak,6625,17835
+Régi térkép,Konyhai eszközök,27252,40033
+Antik tükör,Művészet,6408,17099
+Antik tükör,Művészet,40574,56021
+Régi festmény,Konyhai eszközök,20156,22441
+Retro televízió,Technika,6938,19164
+Porcelán figura,Dekoráció,16661,33668
+Régi térkép,Technika,9516,23459
+Kovácsoltvas kilincs,Művészet,21928,41866

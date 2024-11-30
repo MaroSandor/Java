@@ -1,0 +1,2 @@
+Cim1;Szerzo1;2020;Kolcsonozheto;500
+Cim2;Szerzo2;2015;NemKolcsonozheto

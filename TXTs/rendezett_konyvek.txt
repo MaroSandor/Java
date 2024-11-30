@@ -1,0 +1,2 @@
+Konyv{cim='Cim2', szerzo='Szerzo2', kiadasEve=2015}
+Konyv{cim='Cim1', szerzo='Szerzo1', kiadasEve=2020}; Kolcsonzesi dij: 500.0

@@ -1,0 +1,9 @@
+Kenyér,300,10
+Tej,200,5
+Vaj,,3
+Sajt,500,8
+Liszt,150,0
+Cukor,100,abc
+Olaj,450,6
+Tészta,250
+Só,100,7

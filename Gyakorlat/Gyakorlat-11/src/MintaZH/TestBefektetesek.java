@@ -28,6 +28,8 @@ public class TestBefektetesek {
                 int futamido = Integer.parseInt(reszek[1]);
                 double kamat = Double.parseDouble(reszek[2]);
 
+
+
                 // folytatni! HÁZI!
             }
         } catch (FileNotFoundException e) {

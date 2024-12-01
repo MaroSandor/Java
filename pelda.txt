@@ -1,2 +1,0 @@
-Ez egy sor a fájlban.
-Ez egy második sor.

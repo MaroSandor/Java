@@ -1,30 +1,6 @@
 import java.io.File;
 
 public class Main {
-    public static void main(String[] args) {
-        // Ellenőrizd, hogy kaptunk-e parancssori argumentumot
-        if (args.length < 1) {
-            System.out.println("Használat: java RecursiveDirectoryWalker <könyvtár elérési út>");
-            return;
-        }
-
-        // Gyökérkönyvtár beállítása
-        File rootDir = new File(args[0]);
-
-        // Ellenőrizd, hogy az argumentum érvényes könyvtár-e
-        if (!rootDir.exists() || !rootDir.isDirectory()) {
-            System.out.println("Hiba: Az adott elérési út nem egy érvényes könyvtár.");
-            return;
-        }
-
-        System.out.println("Könyvtár bejárása: " + rootDir.getAbsolutePath());
-        traverseDirectory(rootDir);
-    }
-
-    /**
-     * Rekurzívan bejárja a megadott könyvtárat és feldolgozza a fájlokat.
-     * @param dir A kezdőkönyvtár
-     */
     public static void traverseDirectory(File dir) {
         // Listázza a könyvtár tartalmát
         File[] files = dir.listFiles();
@@ -49,14 +25,25 @@ public class Main {
         }
     }
 
-    /**
-     * Ellenőrzi, hogy a fájl támogatott képformátum-e.
-     * @param file A fájl, amit ellenőrizni kell
-     * @return true, ha támogatott képformátum
-     */
     public static boolean isSupportedImage(File file) {
         String fileName = file.getName().toLowerCase();
-        return fileName.endsWith(".jpg") || fileName.endsWith(".jpeg") ||
-                fileName.endsWith(".png") || fileName.endsWith(".gif");
+        return fileName.endsWith(".jpg") || fileName.endsWith(".jpeg") || fileName.endsWith(".png") || fileName.endsWith(".gif");
+    }
+
+    public static void main(String[] args) {
+        if (args.length < 1) {
+            System.out.println("Használat: java RecursiveDirectoryWalker <könyvtár elérési út>");
+            return;
+        }
+
+        File rootDir = new File(args[0]); // args[0] <- megadott elérési út
+
+        if (!rootDir.exists() || !rootDir.isDirectory()) {
+            System.out.println("Hiba: Az adott elérési út nem egy érvényes könyvtár.");
+            return;
+        }
+
+        System.out.println("Könyvtár bejárása: " + rootDir.getAbsolutePath());
+        traverseDirectory(rootDir);
     }
 }

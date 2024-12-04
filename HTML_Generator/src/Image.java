@@ -18,4 +18,9 @@ public class Image {
     public String getHtmlFileName() {
         return fileName.substring(0, fileName.lastIndexOf(".")) + ".html";
     }
+
+    @Override
+    public String toString() {
+        return "Image{" + "fileName='" + fileName + '\'' + ", filePath='" + filePath + '\'' + '}';
+    }
 }

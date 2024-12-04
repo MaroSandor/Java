@@ -36,4 +36,9 @@ public class Directory {
     public void addSubDirectories(Directory dir) {
         this.subDirectories.add(dir);
     }
+
+    @Override
+    public String toString() {
+        return "Directory {" + "dirName='" + dirName + '\'' + ", dirPath='" + dirPath + '\'' + ", images=" + images + ", subDirectories=" + subDirectories + '}';
+    }
 }

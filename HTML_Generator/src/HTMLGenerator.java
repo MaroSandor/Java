@@ -115,7 +115,7 @@ public class HTMLGenerator {
                 <body>
                     <div class="container">
                         <h1><a href='""" + rootPath + """
-                        '>Start Page</a></h1>
+                        /index.html'>Start Page</a></h1>
                         <hr />
                         <h2>Directories:</h2>
                         <ul>""" + directoryLinks +

@@ -17,8 +17,10 @@ public class WebsitesGenerate {
             return;
         }
 
-        if (RecursiveFolderTraverse.traverseFolderRecursively(rootDir) != null) {
-            HTMLGenerator.generateHTML(RecursiveFolderTraverse.traverseFolderRecursively(rootDir), args[0]);
+        Directory dir = RecursiveFolderTraverse.traverseFolderRecursively(rootDir);
+
+        if (dir != null) {
+            HTMLGenerator.generateHTML(dir, args[0]);
         } else {
             System.err.println("Hiba: A megadott mappa (" + rootDir + ") null értékkel tért vissza.");
             return;

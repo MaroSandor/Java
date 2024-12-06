@@ -29,7 +29,7 @@ public class Directory {
         return subDirectories;
     }
 
-    public void addImage (Image image) {
+    public void addImage(Image image) {
         this.images.add(image);
     }
 

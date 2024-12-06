@@ -30,17 +30,17 @@ public class HTMLGenerator {
                 </head>
                 <body>
                     <h1><a href='""" + rootPath + """
-                    '>Start Page</a></h1>
-                    <hr />
-                    <p>
-                        <a href='""" + (previous != null ? previous.getHtmlFileName() : "#") + """
-                        '><<</a>
-                        <strong>""" + fileName.getFileName() + """
-                        </strong>
-                        <a href='""" + (next != null ? next.getHtmlFileName() : "#") + """
-                    '>>></a>
-                    </p>
-                    <img src='""" + fileName.getFileName() + """
+                '>Start Page</a></h1>
+                <hr />
+                <p>
+                    <a href='""" + (previous != null ? previous.getHtmlFileName() : "#") + """
+                '><<</a>
+                <strong>""" + fileName.getFileName() + """
+                </strong>
+                <a href='""" + (next != null ? next.getHtmlFileName() : "#") + """
+                '>>></a>
+                </p>
+                <img src='""" + fileName.getFileName() + """
                          '>
                 </body>
                 </html>
@@ -115,22 +115,22 @@ public class HTMLGenerator {
                 <body>
                     <div class="container">
                         <h1><a href='""" + rootPath + """
-                        /index.html'>Start Page</a></h1>
-                        <hr />
-                        <h2>Directories:</h2>
-                        <ul>""" + directoryLinks +
-                        """        
+                /index.html'>Start Page</a></h1>
+                <hr />
+                <h2>Directories:</h2>
+                <ul>""" + directoryLinks +
+                """        
                         </ul>
                         <hr />
                         <h2>Images:</h2>
                         <ul>""" + imageLinks +
-                        """
-                        </ul>
-                    </div>
-                </body>
-                
-                </html>
-                """;
+                """
+                                </ul>
+                            </div>
+                        </body>
+                        
+                        </html>
+                        """;
 
         try (PrintWriter writer = new PrintWriter(html)) {
             writer.write(htmlTemplate);

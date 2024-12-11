@@ -1,50 +1,55 @@
 import java.io.File;
 import java.io.PrintWriter;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 public class HTMLGenerator {
     public static void generateImageHTML(Image fileName, String directory, String rootPath, Image previous, Image next) {
         File html = new File(directory, fileName.getHtmlFileName());
 
+        String startPagePath = "../".repeat(directory.replace("\\", "/").split("/").length - rootPath.replace("\\", "/").split("/").length) + "index.html";
+
         String htmlTemplate = """
-                <!DOCTYPE html>
-                <html lang="en">
-                <head>
-                    <meta charset="UTF-8">
-                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                    <title>""" + fileName.getFileName() + """
-                    </title>
-                    <style>
-                        body {
-                            font-family: Arial, sans-serif;
-                            margin: 20px;
-                        }
-                        a {
-                            color: blue;
-                        }
-                        img {
-                            max-width: 80%;
-                            height: auto;
-                            margin: 20px auto;
-                        }
-                    </style>
-                </head>
-                <body>
-                    <h1><a href='""" + rootPath + """
-                '>Start Page</a></h1>
-                <hr />
-                <p>
-                    <a href='""" + (previous != null ? previous.getHtmlFileName() : "#") + """
-                '><<</a>
-                <strong>""" + fileName.getFileName() + """
-                </strong>
-                <a href='""" + (next != null ? next.getHtmlFileName() : "#") + """
-                '>>></a>
-                </p>
-                <img src='""" + fileName.getFileName() + """
-                         '>
-                </body>
-                </html>
-                """;
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>""" + fileName.getFileName() + """
+        </title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 20px;
+            }
+            a {
+                color: blue;
+            }
+            img {
+                max-width: 80%;
+                height: auto;
+                margin: 20px auto;
+            }
+        </style>
+    </head>
+    <body>
+        <h1><a href='""" + startPagePath + """
+        '>Start Page</a></h1>
+        <p><a href='index.html'>^^</a></p>
+        <hr />
+        <p>
+            <a href='""" + (previous != null ? previous.getHtmlFileName() : "#") + """
+            '><<</a>
+            <strong>""" + fileName.getFileName() + """
+            </strong>
+            <a href='""" + (next != null ? next.getHtmlFileName() : "#") + """
+        '>>></a>
+        </p>
+        <img src='""" + fileName.getFileName() + """
+    '>
+    </body>
+    </html>
+    """;
 
         try (PrintWriter writer = new PrintWriter(html)) {
             writer.write(htmlTemplate);
@@ -56,8 +61,9 @@ public class HTMLGenerator {
     public static void generateIndexHTML(Directory directory, String rootPath) {
         File html = new File(directory.getDirPath(), "index.html");
 
-        StringBuilder imageLinks = new StringBuilder();
+        String startPagePath = "../".repeat(directory.getDirPath().replace("\\", "/").split("/").length - rootPath.replace("\\", "/").split("/").length) + "index.html";
 
+        StringBuilder imageLinks = new StringBuilder();
         for (Image image : directory.getImages()) {
             imageLinks.append("<li><a href=\"")
                     .append(image.getHtmlFileName())
@@ -67,7 +73,6 @@ public class HTMLGenerator {
         }
 
         StringBuilder directoryLinks = new StringBuilder();
-
         for (Directory dir : directory.getSubDirectories()) {
             directoryLinks.append("<li><a href=\"")
                     .append(dir.getDirName())
@@ -76,61 +81,42 @@ public class HTMLGenerator {
                     .append("</a></li>\n");
         }
 
+        if (!directory.getDirPath().equals(rootPath)) {
+            directoryLinks.insert(0, "<li><a href=\"../index.html\"><<</a></li>\n");
+        }
+
         String htmlTemplate = """
-                <!DOCTYPE html>
-                <html lang="hu">
-                
-                <head>
-                    <meta charset="UTF-8">
-                    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                    <title>""" + directory.getDirName() + """
-                    </title>
-                    <style>
-                        body {
-                            font-family: Arial, sans-serif;
-                            margin: 0;
-                            padding: 0;
-                        }
-                
-                        .container {
-                            margin: 0 auto;
-                            padding: 20px;
-                        }
-                
-                        a {
-                            color: blue;
-                        }
-                
-                        li {
-                            margin-bottom: 10px;
-                        }
-                
-                        li a:hover {
-                            color: red;
-                        }
-                    </style>
-                </head>
-                
-                <body>
-                    <div class="container">
-                        <h1><a href='""" + rootPath + """
-                /index.html'>Start Page</a></h1>
+            <!DOCTYPE html>
+            <html lang="hu">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>""" + directory.getDirName() + """
+                </title>
+                <style>
+                    body {
+                        font-family: Arial, sans-serif;
+                        margin: 20px;
+                    }
+                    a {
+                        color: blue;
+                    }
+                </style>
+            </head>
+            <body>
+                <h1><a href='""" + startPagePath + """
+                '>Start Page</a></h1>
                 <hr />
                 <h2>Directories:</h2>
-                <ul>""" + directoryLinks +
-                """        
-                        </ul>
-                        <hr />
-                        <h2>Images:</h2>
-                        <ul>""" + imageLinks +
-                """
-                                </ul>
-                            </div>
-                        </body>
-                        
-                        </html>
-                        """;
+                <ul>""" + directoryLinks + """
+                </ul>
+                <hr />
+                <h2>Images:</h2>
+                <ul>""" + imageLinks + """
+            </ul>
+            </body>
+            </html>
+            """;
 
         try (PrintWriter writer = new PrintWriter(html)) {
             writer.write(htmlTemplate);

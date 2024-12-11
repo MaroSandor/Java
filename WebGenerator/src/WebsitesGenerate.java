@@ -21,6 +21,7 @@ public class WebsitesGenerate {
 
         if (dir != null) {
             HTMLGenerator.generateHTML(dir, args[0]);
+            System.out.println("A HTML fájlok sikeresen legenerálva!");
         } else {
             System.err.println("Hiba: A megadott mappa (" + rootDir + ") null értékkel tért vissza.");
             return;

@@ -45,8 +45,10 @@ public class HTMLGenerator {
                     <a href='""" + (next != null ? next.getHtmlFileName() : "#") + """
                 '>>></a>
                 </p>
+                <a href='""" + (next != null ? next.getHtmlFileName() : "#") + """
+                '>
                 <img src='""" + fileName.getFileName() + """
-            '>
+            '></a>
             </body>
             </html>
             """;

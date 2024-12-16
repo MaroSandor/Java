@@ -1,7 +1,5 @@
 import java.io.File;
 import java.io.PrintWriter;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 
 public class HTMLGenerator {
     public static void generateImageHTML(Image fileName, String directory, String rootPath, Image previous, Image next) {

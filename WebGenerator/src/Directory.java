@@ -1,10 +1,10 @@
 import java.util.List;
 
 public class Directory {
-    private String dirName;
-    private String dirPath;
-    private List<Image> images;
-    private List<Directory> subDirectories;
+    private final String dirName;
+    private final String dirPath;
+    private final List<Image> images;
+    private final List<Directory> subDirectories;
 
     public Directory(String dirName, String dirPath, List<Image> images, List<Directory> subDirectories) {
         this.dirName = dirName;

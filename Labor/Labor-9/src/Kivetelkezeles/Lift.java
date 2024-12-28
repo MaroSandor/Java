@@ -1,7 +1,6 @@
 package Kivetelkezeles;
 
 import Kivetelkezeles.kivetel.HibasIranyException;
-
 import java.util.Random;
 
 public class Lift implements Mozog {
